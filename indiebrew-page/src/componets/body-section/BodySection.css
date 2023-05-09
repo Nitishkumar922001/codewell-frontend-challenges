@@ -1,0 +1,35 @@
+.body-container{
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 50px;
+}
+.body-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.body-left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 20px;
+}
+
+.title2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.body-left a{
+    color: #5f50df;
+    font-weight: 700;
+}
+.body-right {
+    width: 50%;
+}
+
+.body-right img {
+    width: 100%;
+}
