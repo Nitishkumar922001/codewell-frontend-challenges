@@ -1,0 +1,32 @@
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-links{
+    width: 380px;
+    font-weight: 500;
+}
+.logo img{
+    width: 150px;
+    object-fit: contain;
+    object-position: center;
+    
+    
+}
+.nav-links ul{
+    list-style: none;
+display: flex;  
+align-items: center;
+justify-content: space-between;
+}
+.btn-primary{
+padding:1rem 2rem;
+color:white;
+background: #5f50df;
+font-weight: 500;
+border-radius: 4px;
+}
+.btn-primary span{
+    font-weight: 300;
+}
