@@ -68,8 +68,11 @@
     border-radius: 10px;
 
   }
+.nav-links ul:last-child{
+  width: 80%;
+}
   .btn-mobile{
-    width: 90%;
+    width: 100%;
     text-align: center;
     padding: 0.5rem 2rem;
   }

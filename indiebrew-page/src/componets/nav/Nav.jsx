@@ -2,12 +2,14 @@ import Logo from '../../Assets/Logo.svg';
 import menuBtn from '../../Assets/Hamburger Menu.svg';
 import back from '../../Assets/Back Arrow.svg';
 import './Nav.css';
+import { useNavigate } from 'react-router';
 import { useState } from 'react';
 function Nav() {
     const [toggel, setToggel] = useState(0)
     function toggelMenu() {
         setToggel(!toggel);
     }
+    const navigate=useNavigate();
     return (
         <>
             <nav className="nav-bar">
@@ -24,7 +26,7 @@ function Nav() {
 
                             <li>Pricing</li>
                             <li>Support</li>
-                            <li className='btn-primary btn-mobile'> Get Started- <span>it's free</span></li>
+                            <li><button className='btn-primary btn-mobile' onClick={()=>navigate('/signuppage')}>Get Started- <span>it's free</span></button></li>
 
                         </ul>
                     </div>

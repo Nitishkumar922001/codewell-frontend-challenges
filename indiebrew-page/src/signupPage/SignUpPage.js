@@ -1,7 +1,31 @@
 import './SignUpPage.css';
 import logo from '../Assets/Logo.svg'
 import back from '../Assets/Back Arrow.svg'
+import { useNavigate } from 'react-router-dom';
+import { useRef, useState } from 'react';
+import { validate } from './validate';
 function SignUpPage() {
+const Data=useRef();
+const [error,setError]=useState({})
+function onChangeHandler(event)
+{
+   
+    if(event.target.id==='termsConditions')
+    {
+        Data[event.target.id]=event.target.checked; 
+    }
+    else
+    Data[event.target.id]=event.target.value;
+}
+function sumbitHandler(event)
+{ event.preventDefault();
+    console.log(Data)
+    const err=validate(Data);
+    setError({...err});
+    console.log(err);
+
+}
+    const navigate=useNavigate();
     return (
         <div className="signup-container">
             <div className="signup-nav">
@@ -9,7 +33,7 @@ function SignUpPage() {
                     <img src={logo} alt='logo' />
                 </div>
 
-                <button className="back-btn" ><img src={back} /></button>
+                <button className="back-btn" onClick={()=>navigate('/')} ><img src={back} /></button>
 
             </div>
             <div className='signup-card'>
@@ -27,22 +51,25 @@ function SignUpPage() {
                 <form className="right-part">
                     <div className='input-group'>
                         <label htmlFor='email'>Email</label>
-                        <input type='email' id='email' placeholder='john@example.com'></input>
+                        <input type='email' id='email' placeholder='john@example.com' onChange={onChangeHandler}></input>
+                        <p className='error-msg'>{error.email}</p>
                     </div>
                     <div className='input-group'>
                         <label htmlFor='name'>Full Name</label>
-                        <input type='text' id='name' placeholder='Jhon Doe'></input>
+                        <input type='text' id='name' placeholder='Jhon Doe' onChange={onChangeHandler}/>
+                        <p className='error-msg'>{error.name}</p>
                     </div>
                     <div className='input-group'>
-                        <label htmlFor='email'>Password</label>
-                        <input type='password' id='email' placeholder='At least 8 characters'></input>
+                        <label htmlFor='password'>Password</label>
+                        <input type='password' id='password' placeholder='At least 8 characters' onChange={onChangeHandler}/>
+                        <p className='error-msg'>{error.password}</p>
                     </div>
                     <div className='input-group check-box'>
-                        <input type='checkbox' id='terms-conditions' />
-                        <label htmlFor='terms-conditions'>By creating an accounton lndieBrew. you agree to the <a className='term-condition-a'>Terms and conditions</a></label>
-
+                        <input type='checkbox' id='termsConditions' onChange={onChangeHandler} />
+                        <label htmlFor='termsConditions'>By creating an accounton lndieBrew. you agree to the <a className='term-condition-a'href='/'>Terms and conditions</a></label>
+                        <p className='error-msg'>{error.termsConditions}</p>
                     </div>
-                    <button>Create an Account</button>
+                    <button onClick={sumbitHandler}>Create an Account</button>
                 </form>
             </div>
         </div>

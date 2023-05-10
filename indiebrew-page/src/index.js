@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import SignUpPage from './signupPage/SignUpPage';
-
-
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
 <>
-
-{/* <App/> */}
-<SignUpPage></SignUpPage>
+<BrowserRouter>
+<Routes>
+    <Route path="/" element={<App/>}/>
+    <Route path="/signuppage" element={<SignUpPage/>}/>
+</Routes>
+</BrowserRouter>
 </>
 );
 

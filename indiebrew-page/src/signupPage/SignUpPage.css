@@ -22,7 +22,7 @@ border-radius: 3px;
 }
 
 .signup-card{
-    margin-top: 60px;
+    margin-block: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -109,4 +109,10 @@ width: 100%;}
  .signup-container{
     padding: 40px 40px;
  }
+}
+.error-msg{
+    margin-top: 5px;
+    font-size: 14px;
+color: red;
+    text-align:left;
 }
