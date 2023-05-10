@@ -1,7 +1,6 @@
 .body-container{
     display: flex;
     flex-direction: column;
-
     row-gap: 50px;
 }
 .body-card {
@@ -14,7 +13,7 @@
     width: 40%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items:flex-start;
     row-gap: 20px;
 }
 
@@ -32,4 +31,18 @@
 
 .body-right img {
     width: 100%;
+}
+@media screen and (max-width:768px) 
+{
+    .body-card{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-between;
+        row-gap: 30px;
+    }
+    .body-left,.body-right{
+        align-items:center ;
+        width: 100%;
+    }
 }

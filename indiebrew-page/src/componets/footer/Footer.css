@@ -1,0 +1,31 @@
+.footer-div{
+    display: flex;
+    column-gap: 30px;
+}
+.company-div{
+    width: 80%;
+}
+.footer-div ul{
+    font-weight: 400;
+    list-style: none;
+}
+.footer-div ul :first-child{
+    font-weight: 800;
+}
+.footer-div li{
+    padding-bottom:5px ;
+}
+.footer-links
+{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+@media screen and (max-width:768px) {
+    .footer-div{      
+        justify-content: space-between;
+        row-gap: 30px; 
+        flex-wrap: wrap;
+    }
+   
+}

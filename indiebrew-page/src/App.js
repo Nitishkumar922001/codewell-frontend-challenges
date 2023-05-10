@@ -1,6 +1,7 @@
 
 import './App.css';
 import BodySection from './componets/body-section/BodySection';
+import Footer from './componets/footer/Footer';
 import HeadSection from './componets/head-section/HeadSection';
 import Nav from './componets/nav/Nav';
 
@@ -15,7 +16,9 @@ function App() {
       <main className="main-content">
         <BodySection></BodySection>
       </main>
-      
+      <footer>
+      <Footer></Footer>
+      </footer>
     </div>
 
   );
