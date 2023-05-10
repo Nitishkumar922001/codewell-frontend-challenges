@@ -1,0 +1,112 @@
+.signup-container{
+    padding: 40px 80px;
+    background:linear-gradient(349deg, rgba(255,250,250,1) 15%, rgba(255,225,243,1) 70%);
+    
+  min-height: 100vh;
+}
+.signup-nav{display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.back-btn{
+    border-color:transparent;
+    box-shadow: 0px 0px 1px;
+border-radius: 3px;
+}
+.back-btn  img{
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+    
+ 
+}
+
+.signup-card{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-part,.right-part{width: 45%;}
+
+.left-part{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 30px;
+    justify-content: space-between;
+}
+p{font-size: 1.1rem;
+font-weight: 300;}
+.emoji{
+ font-size: 1.8rem;
+}
+.bold{
+    font-weight: 600;
+}
+
+.right-part{
+    background-color: #ffff;
+    padding: 30px 10px;
+display: flex;
+border-radius: 8px;
+box-shadow: 0px 0px 1px;
+flex-direction: column;
+align-items: center;
+row-gap: 30px;
+justify-content: space-between;
+}
+.input-group{
+    margin-bottom:5px ;
+    width: 80%;
+    text-align: center;
+}
+.input-group label{
+    margin-bottom: 10px;
+    display: block;
+    text-align: start;
+    
+}
+.input-group input {padding: 10px;
+width: 100%;}
+.check-box input{
+    align-self: flex-start;
+    width:5% ;
+   
+}
+.check-box label{
+    margin-left:10px ;
+    display:inline;
+}
+.term-condition-a{
+    color: rgb(80, 53, 254);
+    font-weight: 800;
+    text-decoration: underline;
+}
+.right-part button{
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 600;
+    border-color:transparent;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    color: white;
+    padding: 1rem 2rem;
+    background-color: rgb(71, 49, 218);
+}
+
+@media screen and (max-width:768px) {
+    .right-part,.left-part{
+        width: 100%;
+    }
+    .signup-card{
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+ .input-group{
+    width: 90%;
+ }   
+ .signup-container{
+    padding: 40px 40px;
+ }
+}
